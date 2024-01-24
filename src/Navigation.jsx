@@ -11,7 +11,9 @@ const Stack = createNativeStackNavigator();
 import OnBoarding from './Screens/OnBoarding/OnBoarding';
 import SignIn from './Screens/SignIn/SignIn';
 
-import HomeScreem from './Screens/Home/HomeScreen';
+import HomeScreen from './Screens/Home/HomeScreen';
+
+import BottomTabNavigation from './BottomTabNavigation';
 
 import {AuthContext} from './Context/AuthContext';
 
@@ -28,7 +30,10 @@ export default function Navigation() {
   if (authToken) {
     navigationStack = (
       <>
-        <Stack.Screen name="HomeScreem" component={HomeScreem} />
+        <Stack.Screen
+          name="BottomTabNavigation"
+          component={BottomTabNavigation}
+        />
       </>
     );
   }

@@ -26,6 +26,7 @@ var BgImage = require('../../Images/background.png');
 import {Buddypass_Base_URL} from '@env';
 import axios from 'axios';
 import Toast from 'react-native-toast-message';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import {AuthContext} from '../../Context/AuthContext';
 
@@ -78,7 +79,7 @@ export default function SignIn({navigation}) {
           'Content-Type': 'application/json',
         },
       })
-      .then(res => {
+      .then(async res => {
         setIsLoading(false);
 
         if (res.data.data.user.profile_verified === false) {
@@ -118,6 +119,7 @@ export default function SignIn({navigation}) {
           UnlockAccount(res.data.data.user.email);
         } else {
           setAuthToken(res.data.data.token);
+          await AsyncStorage.setItem('authToken', res.data.data.token);
           Toast.show({
             type: 'success',
             text1: 'Hello',
