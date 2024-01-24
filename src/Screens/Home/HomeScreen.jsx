@@ -45,7 +45,16 @@ export default function HomeScreen() {
             })}
           </View>
 
-          <NewsCard newsData={newsData} />
+          {!newsData ? (
+            <View style={styles.loaderBox}>
+              <ActivityIndicator color="#7879F1" />
+              <Text style={styles.loaderText}>Loading News ...</Text>
+            </View>
+          ) : (
+            <View style={{marginTop: 16}}>
+              <NewsCard newsData={newsData} />
+            </View>
+          )}
 
           <View style={styles.homeTripCardContainer}>
             {discoverTrips?.map((trip, i) => (
@@ -106,5 +115,16 @@ const styles = StyleSheet.create({
     color: '#F2F2F2',
     fontSize: 10,
     alignSelf: 'center',
+  },
+  loaderBox: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 16,
+    alignSelf: 'center',
+  },
+  loaderText: {
+    marginLeft: 8,
+    color: '#f2f2f2',
+    fontFamily: 'Montserrat-Regular',
   },
 });

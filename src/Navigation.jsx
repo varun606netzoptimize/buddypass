@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -9,8 +9,6 @@ const Stack = createNativeStackNavigator();
 
 import OnBoarding from './Screens/OnBoarding/OnBoarding';
 import SignIn from './Screens/SignIn/SignIn';
-
-import HomeScreen from './Screens/Home/HomeScreen';
 
 import BottomTabNavigation from './BottomTabNavigation';
 
