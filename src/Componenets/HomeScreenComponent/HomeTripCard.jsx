@@ -58,7 +58,6 @@ export default function HomeTripCard({
         },
       })
       .then(res => {
-        console.log('like added', res.data);
         setLike(prevValue => !prevValue);
       })
       .catch(err => {

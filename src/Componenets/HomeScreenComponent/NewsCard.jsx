@@ -17,7 +17,7 @@ var buddypassIcon = require('../../Images/buddypass.png');
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 
 const SLIDER_WIDTH = Dimensions.get('window').width + 80;
-const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
+const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.73);
 
 export default function NewsCard({newsData}) {
   const isCarousel = useRef(null);

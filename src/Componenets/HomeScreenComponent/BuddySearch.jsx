@@ -1,7 +1,15 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 
-import {View, Text, StyleSheet, TextInput, Image} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  Image,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import CustomView from '../CustomView';
 import CustomBackButton from '../CustomBackButton';
@@ -18,7 +26,11 @@ export default function BuddySearch({navigation}) {
     <View style={styles.container}>
       <CustomView>
         <View style={{marginTop: '4%'}}>
-          <CustomBackButton onBack={handleBackButtonClick} />
+          <CustomBackButton
+            onBack={handleBackButtonClick}
+            title="Buddy Search"
+            btnType="center"
+          />
         </View>
         <View style={styles.searchBox}>
           <Image source={searchIcon} style={{width: 20, height: 20}} />
@@ -29,6 +41,18 @@ export default function BuddySearch({navigation}) {
             autoFocus={true}
           />
         </View>
+
+        <ScrollView
+          style={{borderWidth: 1, marginTop: 24}}
+          keyboardShouldPersistTaps="always">
+          <TouchableOpacity style={styles.buddies}>
+            <View style={styles.dp} />
+            <View style={styles.nameUsernameContainer}>
+              <Text style={styles.name}>Buddy Name</Text>
+              <Text style={styles.username}>@username</Text>
+            </View>
+          </TouchableOpacity>
+        </ScrollView>
       </CustomView>
     </View>
   );
@@ -55,5 +79,32 @@ const styles = StyleSheet.create({
     height: 40,
     fontFamily: 'Montserrat-Regular',
     fontSize: 14,
+  },
+  name: {
+    width: '94%',
+    fontFamily: 'Montserrat-Regular',
+    fontSize: 16,
+  },
+  username: {
+    width: '94%',
+    fontFamily: 'Montserrat-SemiBold',
+    fontSize: 12,
+    marginTop: 2,
+  },
+  dp: {
+    width: 48,
+    height: 48,
+    borderWidth: 1,
+    borderRadius: 1000,
+  },
+  buddies: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+  },
+  nameUsernameContainer: {
+    width: '85%',
+    paddingLeft: 16,
+    paddingRight: 16,
   },
 });
