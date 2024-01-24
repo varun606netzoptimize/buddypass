@@ -11,6 +11,7 @@ import OnBoarding from './Screens/OnBoarding/OnBoarding';
 import SignIn from './Screens/SignIn/SignIn';
 
 import BottomTabNavigation from './BottomTabNavigation';
+import BuddySearch from './Componenets/HomeScreenComponent/BuddySearch';
 
 import {AuthContext} from './Context/AuthContext';
 
@@ -31,6 +32,7 @@ export default function Navigation() {
           name="BottomTabNavigation"
           component={BottomTabNavigation}
         />
+        <Stack.Screen name="BuddySearch" component={BuddySearch} />
       </>
     );
   }

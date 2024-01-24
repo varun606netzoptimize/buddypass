@@ -21,14 +21,14 @@ import SearchBarButton from '../../Componenets/SearchBarButton';
 import {ExploreCategoriesOptions} from './ExploreCategores';
 import NewsCard from '../../Componenets/HomeScreenComponent/NewsCard';
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
   const {discoverTrips, newsData} = useContext(AuthContext);
 
   return (
     <View style={styles.container}>
       <CustomView>
         <View style={{marginTop: '4%'}}>
-          <SearchBarButton />
+          <SearchBarButton onPress={() => navigation.navigate('BuddySearch')} />
         </View>
 
         <ScrollView style={{marginTop: 20}}>

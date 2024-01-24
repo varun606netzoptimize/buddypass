@@ -1,13 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
-
-import {
-  StyleSheet,
-  Text,
-  Image,
-  TouchableOpacity,
-
-} from 'react-native';
+import React from 'react';
+import {StyleSheet, Text, Image, TouchableOpacity} from 'react-native';
 
 var searchIcon = require('../Images/search.png');
 
@@ -24,7 +18,7 @@ const styles = StyleSheet.create({
   searchBarContainer: {
     width: '100%',
     height: 40,
-    backgroundColor: '#9c9c9c',
+    backgroundColor: '#4E4E4E',
     borderRadius: 100,
     paddingLeft: 16,
     paddingRight: 16,
