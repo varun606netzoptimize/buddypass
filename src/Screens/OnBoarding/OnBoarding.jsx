@@ -1,22 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-native/no-inline-styles */
-/* eslint-disable no-dupe-keys */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
-import {
-  StyleSheet,
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  ImageBackground,
-  Dimensions,
-  Alert,
-} from 'react-native';
+
+import React from 'react';
+import {StyleSheet, View, Text, Image, ImageBackground} from 'react-native';
 import CustomView from '../../Componenets/CustomView';
 import CustomButton from '../../Componenets/CustomButton';
-import {useEffect} from 'react';
 
 var BgImage = require('../../Images/background.png');
 var onboardingImg1 = require('../../Images/onboardingImages/onboardingImg1.png');

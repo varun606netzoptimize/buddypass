@@ -1,9 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-native/no-inline-styles */
-/* eslint-disable no-dupe-keys */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
+import React from 'react';
 import {StyleSheet, Text} from 'react-native';
 
 export default function ErrorText({children}) {

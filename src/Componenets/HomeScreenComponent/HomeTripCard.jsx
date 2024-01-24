@@ -1,9 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-native/no-inline-styles */
-/* eslint-disable no-dupe-keys */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
+
 import React, {useState, useContext, useEffect} from 'react';
 
 import {
@@ -13,7 +10,6 @@ import {
   Image,
   TouchableOpacity,
   ImageBackground,
-  ActivityIndicator,
 } from 'react-native';
 
 var heart = require('../../Images/heart.png');

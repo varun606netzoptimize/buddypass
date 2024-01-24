@@ -1,19 +1,7 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-native/no-inline-styles */
-/* eslint-disable no-dupe-keys */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable no-unused-vars */
 /* eslint-disable prettier/prettier */
-import {Children} from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Image,
-  TouchableOpacity,
-  ImageBackground,
-  Dimensions,
-} from 'react-native';
+import React from 'react';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 export default function Button({buttonName, children, size, ...extraProps}) {
   if (size == 'medium') {
